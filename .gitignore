@@ -1,0 +1,16 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# log files #
+.npm-debug.log
+
+# node
+node_modules
+
+
+
