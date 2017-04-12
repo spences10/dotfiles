@@ -3,13 +3,14 @@
   b = branch
   c = commit -am
   co = checkout
+  cl = clone
   s = status
   p = push
 
 [user]
 	name = spences10
 	email = spences10apps@gmail.com
-  
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -31,7 +32,7 @@
 [user]
 	name = spences10
 	email = spences10apps@gmail.com
-  
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
