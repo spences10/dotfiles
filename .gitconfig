@@ -2,8 +2,10 @@
   a = add .
   b = branch
   c = commit -am
-  co = checkout
   cl = clone
+  co = checkout
+  d = diff
+  i = init
   s = status
   p = push
 
