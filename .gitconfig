@@ -5,9 +5,10 @@
   cl = clone
   co = checkout
   d = diff
+  f = fetch
   i = init
-  s = status
   p = push
+  s = status
 
 [user]
 	name = spences10
@@ -20,29 +21,7 @@
 	required = true
 
 [core]
-	autocrlf = true
-	excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
-
-[alias]
-  a = add .
-  b = branch
-  c = commit -am
-  co = checkout
-  s = status
-  p = push
-
-[user]
-	name = spences10
-	email = spences10apps@gmail.com
-
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-
-[core]
-	# autocrlf = true
+	#autocrlf = false # ¯\_(ツ)_/¯ http://stackoverflow.com/questions/2825428/why-should-i-use-core-autocrlf-true-in-git
 	excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
   editor = code --wait
 
