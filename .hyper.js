@@ -73,11 +73,11 @@ module.exports = {
     // make sure to use a full path if the binary name doesn't work
     // (e.g `C:\\Windows\\System32\\bash.exe` instead of just `bash.exe`)
     // if you're using powershell, make sure to remove the `--login` below
-    shell: 'C:\\Windows\\System32\\cmd.exe',
+    shell: 'C:\\Program Files\\Git\\git-cmd.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
-    shellArgs: ['--login'],
+    shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],
 
     // for environment variables
     env: {},
