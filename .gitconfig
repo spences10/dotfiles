@@ -9,6 +9,8 @@
   i = init
   p = push
   s = status
+  t = git tag
+  pt = git push --tags
 
 [user]
 	name = spences10
