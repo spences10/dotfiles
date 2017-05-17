@@ -7,10 +7,11 @@
   d = diff
   f = fetch
   i = init
+  o = open # see: https://github.com/paulirish/git-open ♥
   p = push
+  pt = push --tags
   s = status
-  t = git tag
-  pt = git push --tags
+  t = tag
 
 [user]
 	name = spences10
