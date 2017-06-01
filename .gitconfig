@@ -13,6 +13,9 @@
   s = status
   t = tag
 
+[color]
+  ui = true
+
 [user]
 	name = spences10
 	email = spences10apps@gmail.com
