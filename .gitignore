@@ -1,16 +1,23 @@
-# Folder view configuration files
-.DS_Store
+# Windows thumbnail cache files
+# https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
 Desktop.ini
 
-# Thumbnail cache files
-._*
-Thumbs.db
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# log files #
-.npm-debug.log
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
 
-# node
-node_modules
-
-
-
+# Windows shortcuts
+*.lnk
