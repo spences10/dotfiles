@@ -1,6 +1,7 @@
 [alias]
   a = add .
-  b = branch
+  b = checkout -b # git checkout -b newbranch
+  bl = branch -a # list all branches
   c = commit -am
   cl = clone
   co = checkout
@@ -10,6 +11,9 @@
   o = open # see: https://github.com/paulirish/git-open ♥
   p = push
   pt = push --tags
+  reabo = rebase --abort # use if you have trouble with merge conflict
+  recon = rebase --continue # use after resolving conflicts
+  rv = remote -v # verify remote url
   s = status
   t = tag
 
