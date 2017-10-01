@@ -6,7 +6,8 @@ module.exports = {
   config: {
     // Choose either "stable" for receiving highly polished,
     // or "canary" for less polished but more frequent updates
-    updateChannel: 'canary',
+    // updateChannel: 'canary',
+    updateChannel: 'stable',
 
     // default font size in pixels for all tabs
     fontSize: 12,
@@ -84,12 +85,12 @@ module.exports = {
     //
     // Powershell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'C:\\Program Files\\Git\\git-cmd.exe',
-    // shell: 'C:\\Windows\\System32\\bash.exe',
+    // shell: 'C:\\Program Files\\Git\\git-cmd.exe',
+    shell: 'C:\\Windows\\System32\\bash.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: ['-i'])
     // by default ['--login'] will be used
-    shellArgs: [ '--command=usr/bin/bash.exe', '-l', '-i' ],
+    // shellArgs: [ '--command=usr/bin/bash.exe', '-l', '-i' ],
 
     // for environment variables
     env: {},
@@ -124,13 +125,16 @@ module.exports = {
     // 'hyperterm-adventurous',
     // 'hyper-snazzy'
     // 'hyper-zenburn',
-    'hyperterm-cobalt2-theme'
+    'hyperterm-cobalt2-theme',
+    // 'hyper-flat-2',
+    'hyperlinks',
+    'hypercwd'
   ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: [],
+  localPlugins: [ 'hyperfullscreen' ],
 
   keymaps: {
     // Example
