@@ -6,6 +6,7 @@
   cl = clone
   co = checkout
   d = diff
+  db = branch -D
   f = fetch
   i = init
   o = open # see: https://github.com/paulirish/git-open ♥
