@@ -1,0 +1,42 @@
+[alias]
+  a = add .
+  b = checkout -b # git checkout -b newbranch
+  bl = branch -a # list all branches
+  c = commit -am
+  cl = clone
+  co = checkout
+  d = diff
+  db = branch -D
+  f = fetch
+  i = init
+  o = open # see: https://github.com/paulirish/git-open ♥
+  p = push
+  pt = push --tags
+  reabo = rebase --abort # use if you have trouble with merge conflict
+  recon = rebase --continue # use after resolving conflicts
+  rv = remote -v # verify remote url
+  s = status
+  t = tag
+
+[color]
+  ui = true
+
+[user]
+  name = spences10
+  email = spences10apps@gmail.com
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
+[core]
+  #autocrlf = false # ¯\_(ツ)_/¯ http://stackoverflow.com/questions/2825428/why-should-i-use-core-autocrlf-true-in-git
+  excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
+  editor = code --wait
+
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
