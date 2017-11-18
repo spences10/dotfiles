@@ -123,9 +123,9 @@ module.exports = {
     // 'hyperterm-tabs',
     // 'hyper-adventure-time',
     // 'hyperterm-adventurous',
-    // 'hyper-snazzy'
+    'hyper-snazzy',
     // 'hyper-zenburn',
-    'hyperterm-cobalt2-theme',
+    // 'hyperterm-cobalt2-theme',
     // 'hyper-flat-2',
     'hyperlinks'
     // 'hypercwd'
