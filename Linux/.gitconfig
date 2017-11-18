@@ -25,17 +25,5 @@
   name = spences10
   email = spences10apps@gmail.com
 
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-  required = true
-
-[core]
-  excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
-  editor = code --wait
-
-[diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+[push]
+  default = simple
