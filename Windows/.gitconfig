@@ -35,6 +35,7 @@
 	#autocrlf = false # ¯\_(ツ)_/¯ http://stackoverflow.com/questions/2825428/why-should-i-use-core-autocrlf-true-in-git
 	excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
   editor = code --wait
+  autocrlf = true
 
 [diff]
     tool = default-difftool
