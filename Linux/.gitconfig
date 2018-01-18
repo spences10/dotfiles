@@ -16,6 +16,7 @@
   recon = rebase --continue # use after resolving conflicts
   rv = remote -v # verify remote url
   s = status
+  sc = clone --depth 20
   t = tag
 
 [color]
