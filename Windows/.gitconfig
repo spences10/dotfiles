@@ -10,7 +10,7 @@
   f = fetch
   i = init
   o = open # see: https://github.com/paulirish/git-open ♥
-  p = push
+  p = pull
   pt = push --tags
   reabo = rebase --abort # use if you have trouble with merge conflict
   recon = rebase --continue # use after resolving conflicts
