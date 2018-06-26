@@ -14,7 +14,7 @@ module.exports = {
 
     // font family with optional fallbacks
     fontFamily:
-      'MonoID, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+      '"Dank Mono", MonoID, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.8)',
