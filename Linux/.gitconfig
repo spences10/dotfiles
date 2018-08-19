@@ -12,8 +12,9 @@
   o = open # see: https://github.com/paulirish/git-open ♥
   p = pull
   pt = push --tags
-  reabo = rebase --abort # use if you have trouble with merge conflict
-  recon = rebase --continue # use after resolving conflicts
+  rba = rebase --abort # use if you have trouble with merge conflict
+  rbc = rebase --continue # use after resolving conflicts
+  rbs = rebase --skip # use for skip in rebase
   rv = remote -v # verify remote url
   s = status
   sc = clone --depth 20
