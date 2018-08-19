@@ -6,17 +6,18 @@
   cl = clone
   co = checkout
   d = diff
-  db = branch -D
+  db = branch -D # delete a branch
   f = fetch
   i = init
   o = open # see: https://github.com/paulirish/git-open ♥
   p = pull
   pt = push --tags
-  reabo = rebase --abort # use if you have trouble with merge conflict
-  recon = rebase --continue # use after resolving conflicts
+  rba = rebase --abort # use if you have trouble with merge conflict
+  rbc = rebase --continue # use after resolving conflicts
+  rbs = rebase --skip # use for skip in rebase
   rv = remote -v # verify remote url
   s = status
-  sc = clone --depth 20
+  sc = clone --depth 20 # shallow clone
   t = tag
 
 [color]
