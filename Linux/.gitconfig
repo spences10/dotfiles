@@ -6,7 +6,7 @@
   cl = clone
   co = checkout
   d = diff
-  db = branch -D
+  db = branch -D # delete a branch
   f = fetch
   i = init
   o = open # see: https://github.com/paulirish/git-open ♥
@@ -17,7 +17,7 @@
   rbs = rebase --skip # use for skip in rebase
   rv = remote -v # verify remote url
   s = status
-  sc = clone --depth 20
+  sc = clone --depth 20 # shallow clone
   t = tag
 
 [color]
