@@ -1,3 +1,6 @@
+[credential]
+  helper = manager
+
 [alias]
   a = add .
   b = checkout -b # git checkout -b newbranch
@@ -6,40 +9,25 @@
   cl = clone
   co = checkout
   d = diff
-  db = branch -D # delete a branch
+  db = branch -D
   f = fetch
   i = init
-  o = open # see: https://github.com/paulirish/git-open ♥
+  o = open # see: https://github.com/paulirish/git-open ?
   p = pull
   pt = push --tags
-  rba = rebase --abort # use if you have trouble with merge conflict
-  rbc = rebase --continue # use after resolving conflicts
-  rbs = rebase --skip # use for skip in rebase
+  ra = rebase --abort # use if you have trouble with merge conflict
+  rc = rebase --continue # use after resolving conflicts
   rv = remote -v # verify remote url
   s = status
-  sc = clone --depth 20 # shallow clone
+  sc = clone --depth 20
   t = tag
 
 [color]
   ui = true
 
 [user]
-	name = spences10
-	email = spences10apps@gmail.com
+  name = spences10
+  email = spences10apps@gmail.com
 
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-
-[core]
-	#autocrlf = false # ¯\_(ツ)_/¯ http://stackoverflow.com/questions/2825428/why-should-i-use-core-autocrlf-true-in-git
-	excludesfile = C:\\Users\\spenc\\OneDrive\\Documents\\gitignore_global.txt
-  editor = code --wait
-  autocrlf = true
-
-[diff]
-    tool = default-difftool
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+[winUpdater]
+  recentlySeenVersion = 2.20.1.windows.1
