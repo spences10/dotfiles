@@ -3,24 +3,27 @@
 
 [alias]
   a = add .
-  b = checkout -b # git checkout -b newbranch
+  b = checkout -b # git checkout -b newbranch 
   bl = branch -a # list all branches
-  c = commit -am
+  c = commit -am # commit add message
   cl = clone
   co = checkout
   d = diff
-  db = branch -D
+  db = branch -D # delete branch
   f = fetch
-  i = init
-  o = open # see: https://github.com/paulirish/git-open ?
+  i = init 
+  o = open # see: https://github.com/paulirish/git-open ♥
   p = pull
+  prune = remote prune origin
   pt = push --tags
   ra = rebase --abort # use if you have trouble with merge conflict
   rc = rebase --continue # use after resolving conflicts
+  rs = rebase --skip # nothing to resolve move along
   rv = remote -v # verify remote url
   s = status
-  sc = clone --depth 20
-  t = tag
+  sc = clone --depth 20 # shallow clone 
+  t = tag -l # list tags
+  ta = tag -a # add tag
 
 [color]
   ui = true
