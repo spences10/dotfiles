@@ -32,5 +32,8 @@
   name = spences10
   email = spences10apps@gmail.com
 
+[core]
+  filemode=false # https://stackoverflow.com/questions/1257592/how-do-i-remove-files-saying-old-mode-100755-new-mode-100644-from-unstaged-cha#
+
 [winUpdater]
   recentlySeenVersion = 2.20.1.windows.1
