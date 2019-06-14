@@ -12,6 +12,8 @@
   db = branch -D # delete branch
   f = fetch
   i = init 
+  # https://egghead.io/lessons/git-make-my-git-log-look-pretty-and-readable
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches 
   o = open # see: https://github.com/paulirish/git-open ♥
   p = pull
   prune = remote prune origin
