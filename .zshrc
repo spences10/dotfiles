@@ -135,11 +135,6 @@ bindkey " " globalias                 # space key to expand globalalias
 bindkey "^[[Z" magic-space            # shift-tab to bypass completion
 bindkey -M isearch " " magic-space    # normal space during searches
 
-
-alias -g yyd='yarn && yarn dev'
-alias -g r='cd /home/scott/repos'
-alias -g nr='npm run'
-alias -g nrs='npm run start'
-alias -g c='code .'
+. ~/.zsh_aliases
 
 #}}}

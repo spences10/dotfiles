@@ -1,0 +1,14 @@
+# Aliases to use with Global Alias
+#------------------------------------------------------
+# Automatically Expanding Global Aliases (Space key to expand)
+# references: http://blog.patshead.com/2012/11/automatically-expaning-zsh-global-aliases---simplified.html
+# video: https://www.youtube.com/watch?v=WTTIGjZAMGg
+# import this file into the .zshrc fie with '. ~/.zsh_aliases'
+
+alias -g yyd='yarn && yarn dev'
+alias -g r='cd /home/scott/repos'
+alias -g nr='npm run'
+alias -g nrs='npm run start'
+alias -g c='code .'
+alias -g pp='git pull && git push'
+alias -g gpr='hub pull-request -b '
