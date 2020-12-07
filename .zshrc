@@ -2,19 +2,18 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/scott.spence/.oh-my-zsh"
+export ZSH="/home/scott/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="spaceship"
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="agnoster"
+# ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -35,7 +34,7 @@ ZSH_THEME="spaceship"
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -66,11 +65,20 @@ ZSH_THEME="spaceship"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  node
+  npm
+  npx
+  nvm
+  z
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,20 +105,41 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c="code ."
-alias ci="code-insiders ."
-alias ya="yarn add"
-alias yb="yarn build"
-alias yr="yarn remove"
-alias yd="yarn dev"
-alias yad="yarn add -D"
-alias g="git"
-alias e=exit
-alias r="cd ~/repos/"
-alias p="cd ~/repos/personal"
-alias pp="g pull && git push"
-alias gitConfig="git config user.name spences10 && git config user.email spences10apps@gmail.com"
-alias yga="yarn global add"
-alias ygr="yarn global remove"
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Startup folder
+cd /home/scott/repos/
+
+# set DISPLAY variable to the IP automatically assigned to WSL2
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+
+# Automatically start dbus
+sudo /etc/init.d/dbus start &> /dev/null
+
+#-------- Global Alias {{{
+#------------------------------------------------------
+# Automatically Expanding Global Aliases (Space key to expand)
+# references: http://blog.patshead.com/2012/11/automatically-expaning-zsh-global-aliases---simplified.html 
+# video: https://www.youtube.com/watch?v=WTTIGjZAMGg
+globalias() {
+  if [[ $LBUFFER =~ '[a-zA-Z0-9]+$' ]]; then
+    zle _expand_alias
+    zle expand-word
+  fi
+  zle self-insert
+}
+zle -N globalias
+bindkey " " globalias                 # space key to expand globalalias
+# bindkey "^ " magic-space            # control-space to bypass completion
+bindkey "^[[Z" magic-space            # shift-tab to bypass completion
+bindkey -M isearch " " magic-space    # normal space during searches
+
+
+alias -g yyd='yarn && yarn dev'
+alias -g r='cd /home/scott/repos'
+alias -g nr='npm run'
+alias -g nrs='npm run start'
+alias -g c='code .'
+
+#}}}
