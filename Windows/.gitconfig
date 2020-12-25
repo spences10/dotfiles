@@ -39,3 +39,6 @@
 
 [winUpdater]
   recentlySeenVersion = 2.20.1.windows.1
+
+[help]
+  autoCorrect = 20

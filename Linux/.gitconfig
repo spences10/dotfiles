@@ -33,3 +33,6 @@
 [user]
   name = spences10
   email = spences10apps@gmail.com
+
+[help]
+  autoCorrect = 20
