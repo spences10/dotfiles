@@ -1,17 +1,50 @@
-# Aliases to use with Global Alias
+# Aliases to use with Global Alias 
 #------------------------------------------------------
 # Automatically Expanding Global Aliases (Space key to expand)
 # references: http://blog.patshead.com/2012/11/automatically-expaning-zsh-global-aliases---simplified.html
 # video: https://www.youtube.com/watch?v=WTTIGjZAMGg
 # import this file into the .zshrc fie with '. ~/.zsh_aliases'
 
-alias -g yyd='yarn && yarn dev'
+# folder locations
 alias -g r='cd /home/scott/repos'
+
+# git commands
+alias -g pp='git pull && git push'
+alias -g gpr='git pull-request -b '
+alias -g ga='git add .'
+alias -g gc='git commit -m '
+alias -g gagc='git add . && git commit -m '
+alias -g gbr='git browse'
+alias -g grb='git rebase -'
+alias -g gs='git status'
+alias -g gb='git checkout -b'
+alias -g grc='git rebase --continue'
+alias -g grs='git rebase --skip'
+alias -g grv='git remote -v'
+
+# Hub commands
+alias -g gpr='git pull-request -b '
+alias -g gcr='git create'
+
+# yarn commands
+alias -g ya='yarn add'
+alias -g yad='yarn add -D'
+alias -g yb='yarn build'
+alias -g yd='yarn dev'
+alias -g yg='yarn go'
+alias -g yga='yarn global add'
+alias -g yr='yarn remove'
+alias -g ys='yarn start'
+alias -g yyb='yarn && yarn build'
+alias -g yyd='yarn && yarn dev'
+alias -g yui='yarn upgrade-interactive --latest'
+alias -g ygui='yarn global upgrade-interactive --latest'
+alias -g yyd='yarn && yarn dev'
+
+# npm commands
 alias -g nr='npm run'
 alias -g nrs='npm run start'
 alias -g c='code .'
-alias -g pp='git pull && git push'
-alias -g gpr='hub pull-request -b '
 alias -g e=exit
 alias -g ni='npm i'
 alias -g nid='npm i -D'
@@ -25,13 +58,3 @@ alias -g nrf='npm run format'
 alias -g nrs='npm run start'
 alias -g nu='npm un'
 alias -g nug='npm -g un'
-alias -g ya='yarn add'
-alias -g yad='yarn add -D'
-alias -g yb='yarn build'
-alias -g yd='yarn dev'
-alias -g yg='yarn go'
-alias -g yga='yarn global add'
-alias -g yr='yarn remove'
-alias -g ys='yarn start'
-alias -g yyb='yarn && yarn build'
-alias -g yyd='yarn && yarn dev'
