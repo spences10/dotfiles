@@ -77,7 +77,6 @@ plugins=(
   npm
   npx
   nvm
-  z
 )
 
 source $ZSH/oh-my-zsh.sh
