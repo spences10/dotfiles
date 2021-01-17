@@ -42,3 +42,6 @@
 
 [help]
   autoCorrect = 20
+
+[pull]
+  ff = only
