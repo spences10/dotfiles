@@ -8,8 +8,7 @@ export ZSH="/home/scott/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
-# ZSH_THEME="random"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -46,6 +45,8 @@ ZSH_THEME="agnoster"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
+# See https://github.com/ohmyzsh/ohmyzsh/issues/5765
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -71,12 +72,12 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-autosuggestions
-  zsh-syntax-highlighting
   node
   npm
   npx
   nvm
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,20 +108,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Startup folder
-cd /home/scott/repos/
+# default dir
+cd ~/repos
 
-# set DISPLAY variable to the IP automatically assigned to WSL2
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
+# autosuggest
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
 
-# Automatically start dbus
-sudo /etc/init.d/dbus start &> /dev/null
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# yarn global bins
+export PATH="$PATH:`yarn global bin`"
+
+# using hub alias to git
+alias git=hub
 
 #-------- Global Alias {{{
-#------------------------------------------------------
-# Automatically Expanding Global Aliases (Space key to expand)
-# references: http://blog.patshead.com/2012/11/automatically-expaning-zsh-global-aliases---simplified.html 
-# video: https://www.youtube.com/watch?v=WTTIGjZAMGg
 globalias() {
   if [[ $LBUFFER =~ '[a-zA-Z0-9]+$' ]]; then
     zle _expand_alias
@@ -133,7 +138,5 @@ bindkey " " globalias                 # space key to expand globalalias
 # bindkey "^ " magic-space            # control-space to bypass completion
 bindkey "^[[Z" magic-space            # shift-tab to bypass completion
 bindkey -M isearch " " magic-space    # normal space during searches
-
 . ~/.zsh_aliases
-
 #}}}
