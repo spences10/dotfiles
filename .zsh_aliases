@@ -5,6 +5,9 @@
 # video: https://www.youtube.com/watch?v=WTTIGjZAMGg
 # import this file into the .zshrc fie with '. ~/.zsh_aliases'
 
+# dendron
+alias -g den='cd ~/repos/dendron && code . && code dendron.code-workspace'
+
 # folder locations
 alias -g r='cd /home/scott/repos'
 
