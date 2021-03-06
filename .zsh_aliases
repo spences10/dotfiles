@@ -46,6 +46,7 @@ alias -g yyd='yarn && yarn dev'
 alias -g yui='yarn upgrade-interactive --latest'
 alias -g ygui='yarn global upgrade-interactive --latest'
 alias -g yyd='yarn && yarn dev'
+alias -g ylg='yarn global list'
 
 # npm commands
 alias -g nr='npm run'
@@ -64,3 +65,4 @@ alias -g nrf='npm run format'
 alias -g nrs='npm run start'
 alias -g nu='npm un'
 alias -g nug='npm -g un'
+alias -g nlg='npm list -g --depth=0'
