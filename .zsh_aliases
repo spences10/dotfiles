@@ -66,3 +66,6 @@ alias -g nrs='npm run start'
 alias -g nu='npm un'
 alias -g nug='npm -g un'
 alias -g nlg='npm list -g --depth=0'
+
+# nvm
+alias -g nln='nvm install-latest-npm'
