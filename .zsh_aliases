@@ -8,6 +8,9 @@
 # file shit
 alias -g rmrf='rm -rf '
 
+# direnv
+alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
+
 # dendron
 alias -g den='cd ~/repos/dendron && code . && code dendron.code-workspace'
 
