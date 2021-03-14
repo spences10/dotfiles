@@ -36,12 +36,14 @@
 
 [core]
   filemode=false # https://stackoverflow.com/questions/1257592/how-do-i-remove-files-saying-old-mode-100755-new-mode-100644-from-unstaged-cha#
-
-[winUpdater]
-  recentlySeenVersion = 2.20.1.windows.1
+  excludesfile = /home/scott/.gitignore_global
+  editor = nano
 
 [help]
   autoCorrect = 20
 
 [pull]
   ff = only
+
+[init]
+	defaultBranch = main
