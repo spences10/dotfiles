@@ -46,4 +46,4 @@
   ff = only
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
