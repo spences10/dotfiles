@@ -14,6 +14,9 @@ alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
 # dendron
 alias -g den='cd ~/repos/dendron && code . && code dendron.code-workspace'
 
+# gcms notes
+alias -g gcms='cd ~/repos/gcms-notes && code . && code dendron.code-workspace'
+
 # folder locations
 alias -g r='cd /home/scott/repos'
 
