@@ -74,7 +74,6 @@ plugins=(
   git
   node
   npm
-  npx
   nvm
   zsh-syntax-highlighting
   zsh-autosuggestions
