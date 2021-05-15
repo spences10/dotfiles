@@ -8,6 +8,9 @@
 # file shit
 alias -g rmrf='rm -rf '
 
+# kill port
+npx kill-port 
+
 # direnv
 alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
 
