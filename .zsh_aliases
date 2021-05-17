@@ -24,7 +24,7 @@ alias -g gcms='cd ~/repos/gcms-notes && code . && code dendron.code-workspace'
 alias -g r='cd /home/scott/repos'
 
 # git commands
-alias -g pp='git pull && git push'
+alias -g pp='git pull --rebase && git push'
 alias -g gpr='git pull-request -b '
 alias -g ga='git add .'
 alias -g gc='git commit -m '
