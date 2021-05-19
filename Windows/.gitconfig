@@ -16,6 +16,7 @@
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches 
   o = open # see: https://github.com/paulirish/git-open ♥
   p = pull
+  pr = pull --rebase
   prune = remote prune origin
   pt = push --tags
   ra = rebase --abort # use if you have trouble with merge conflict
