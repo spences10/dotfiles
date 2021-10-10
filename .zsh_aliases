@@ -10,6 +10,7 @@ alias -g rmrf='rm -rf '
 
 # kill port
 alias -g kill='npx kill-port '
+alias -g killp='pnpx kill-port '
 
 # direnv
 alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
@@ -22,6 +23,10 @@ alias -g gcms='cd ~/repos/gcms-notes && code . && code dendron.code-workspace'
 
 # folder locations
 alias -g r='cd /home/scott/repos'
+
+# navigation
+alias -g c='code .'
+alias -g e=exit
 
 # git commands
 alias -g pp='git pull --rebase && git push'
@@ -60,8 +65,6 @@ alias -g ylg='yarn global list'
 # npm commands
 alias -g nr='npm run'
 alias -g nrs='npm run start'
-alias -g c='code .'
-alias -g e=exit
 alias -g ni='npm i'
 alias -g nid='npm i -D'
 alias -g nig='npm i -g'
@@ -75,6 +78,23 @@ alias -g nrs='npm run start'
 alias -g nu='npm un'
 alias -g nug='npm -g un'
 alias -g nlg='npm list -g --depth=0'
+
+# pnpm commands
+alias -g pr='pnpm run'
+alias -g prs='pnpm run start'
+alias -g pi='pnpm i'
+alias -g pid='pnpm i -D'
+alias -g pig='pnpm i -g'
+alias -g po='pnpm outdated'
+alias -g pog='pnpm outdated -g --depth=0'
+alias -g pr='pnpm run'
+alias -g prb='pnpm run build'
+alias -g prd='pnpm run dev'
+alias -g prf='pnpm run format'
+alias -g prs='pnpm run start'
+alias -g pu='pnpm un'
+alias -g pug='pnpm -g un'
+alias -g plg='pnpm list -g --depth=0'
 
 # nvm
 alias -g nln='nvm install-latest-npm'
