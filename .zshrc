@@ -124,6 +124,10 @@ export PATH="$PATH:`yarn global bin`"
 # set DISPLAY variable to the IP automatically assigned to WSL2
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
+# disable battery warn, this is for when you get a warning like this
+# (upower:2140): UPower-WARNING **: 06:49:24.394: Cannot connect to upowerd: Could not connect: No such file or directory
+export SPACESHIP_BATTERY_SHOW=false
+
 #-------- Global Alias {{{
 globalias() {
   if [[ $LBUFFER =~ '[a-zA-Z0-9]+$' ]]; then
