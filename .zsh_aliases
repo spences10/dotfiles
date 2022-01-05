@@ -29,6 +29,9 @@ alias -g c='code .'
 alias -g e=exit
 
 # git commands
+alias -g g=git
+alias -g gbl='branch -a'
+alias -g gcl='git clone '
 alias -g pp='git pull --rebase && git push'
 alias -g gpr='git pull-request -b '
 alias -g ga='git add .'
@@ -41,6 +44,10 @@ alias -g gb='git checkout -b'
 alias -g grc='git rebase --continue'
 alias -g grs='git rebase --skip'
 alias -g grv='git remote -v'
+alias -g gp='git fetch -p'
+
+# Git Removed Branches
+alias -g grb='npx git-removed-branches'
 
 # Hub commands
 alias -g gpr='git pull-request -b '
