@@ -1,4 +1,4 @@
-# Aliases to use with Global Alias 
+# Aliases to use with Global Alias
 #------------------------------------------------------
 # Automatically Expanding Global Aliases (Space key to expand)
 # references: http://blog.patshead.com/2012/11/automatically-expaning-zsh-global-aliases---simplified.html
@@ -12,17 +12,14 @@ alias -g rmrf='rm -rf '
 alias -g kill='npx kill-port '
 alias -g killp='pnpx kill-port '
 
+# brew
+alias -g bi='HOMEBREW_NO_AUTO_UPDATE=1 brew install '
+
 # direnv
 alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
 
-# dendron
-alias -g den='cd ~/repos/dendron && code . && code dendron.code-workspace'
-
-# gcms notes
-alias -g gcms='cd ~/repos/gcms-notes && code . && code dendron.code-workspace'
-
 # folder locations
-alias -g r='cd /home/scott/repos'
+alias -g r='cd /Users/scott/repos'
 
 # navigation
 alias -g c='code .'
