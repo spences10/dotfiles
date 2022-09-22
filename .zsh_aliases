@@ -99,6 +99,7 @@ alias -g prs='pnpm run start'
 alias -g pu='pnpm un'
 alias -g pug='pnpm -g un'
 alias -g plg='pnpm list -g --depth=0'
+alias -g pc='pnpm create '
 
 # nvm
 alias -g nln='nvm install-latest-npm'
