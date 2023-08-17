@@ -103,3 +103,7 @@ alias -g pc='pnpm create '
 
 # nvm
 alias -g nln='nvm install-latest-npm'
+
+# check domain
+alias domaincheck="f_domaincheck() { whois \$1 | grep -E 'No match|^NOT FOUND|available for registration' || echo 'Taken'; }; f_domaincheck"
+
