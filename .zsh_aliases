@@ -15,11 +15,14 @@ alias -g killp='pnpx kill-port '
 # brew
 alias -g bi='HOMEBREW_NO_AUTO_UPDATE=1 brew install '
 
+# tree
+alias -g tdl='tree -a -I 'node_modules|.svelte-kit|.git' --dirsfirst'
+
 # direnv
 alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
 
 # folder locations
-alias -g r='cd /Users/scott/repos'
+alias -g r='cd /home/scott/repos'
 
 # navigation
 alias -g c='code .'
@@ -103,7 +106,3 @@ alias -g pc='pnpm create '
 
 # nvm
 alias -g nln='nvm install-latest-npm'
-
-# check domain
-alias domaincheck="f_domaincheck() { whois \$1 | grep -E 'No match|^NOT FOUND|available for registration' || echo 'Taken'; }; f_domaincheck"
-
