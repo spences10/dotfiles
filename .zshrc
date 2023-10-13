@@ -1,10 +1,21 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/home/scott/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
 
+# spaceship config
+SPACESHIP_PROMPT_ASYNC=false
+SPACESHIP_PROMPT_ADD_NEWLINE="true"
+SPACESHIP_CHAR_SYMBOL="⚡"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  git
   zsh-syntax-highlighting
   zsh-autosuggestions
 )
@@ -13,22 +24,16 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# default dir
-cd ~/repos
-
-# autosuggest
+# auto suggest
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
 
-# nvm
+# starting dir
+cd ~/repos
+
+# nvm config
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# yarn global bins
-export PATH="$PATH:`yarn global bin`"
-
-# set DISPLAY variable to the IP automatically assigned to WSL2
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 #-------- Global Alias {{{
 globalias() {
@@ -46,11 +51,21 @@ bindkey -M isearch " " magic-space    # normal space during searches
 . ~/.zsh_aliases
 #}}}
 
-SPACESHIP_PROMPT_ADD_NEWLINE="true"
-SPACESHIP_CHAR_SYMBOL="⚡"
-#SPACESHIP_CHAR_PREFIX="\uf296"
-#SPACESHIP_CHAR_SUFFIX=(" ")
-#SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
-#SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
-#SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
-#SPACESHIP_USER_SHOW="true"
+
+# pnpm
+export PNPM_HOME="/home/scott/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Turso
+export PATH="/home/scott/.turso:$PATH"
+
+# bun completions
+[ -s "/home/scott/.bun/_bun" ] && source "/home/scott/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
