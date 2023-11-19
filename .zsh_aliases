@@ -16,7 +16,7 @@ alias -g killp='pnpx kill-port '
 alias -g bi='HOMEBREW_NO_AUTO_UPDATE=1 brew install '
 
 # tree
-alias -g tdl='tree -a -I 'node_modules|.svelte-kit|.git' --dirsfirst'
+alias -g tdl="tree -a -I 'node_modules|.svelte-kit|.git' --dirsfirst"
 
 # direnv
 alias -g di='echo dotenv > .envrc && touch .env && direnv allow'
@@ -27,6 +27,7 @@ alias -g r='cd /home/scott/repos'
 # navigation
 alias -g c='code .'
 alias -g e=exit
+alias -g ls='ls -lart'
 
 # git commands
 alias -g g=git
