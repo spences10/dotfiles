@@ -48,3 +48,7 @@
 
 [init]
   defaultBranch = main
+
+# https://medium.com/@porteneuve/fix-conflicts-only-once-with-git-rerere-7d116b2cec67
+[rerere]
+  enabled = true
