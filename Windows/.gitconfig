@@ -45,6 +45,7 @@
 
 [pull]
   ff = only
+  rebase = true
 
 [init]
   defaultBranch = main
@@ -52,3 +53,7 @@
 # https://medium.com/@porteneuve/fix-conflicts-only-once-with-git-rerere-7d116b2cec67
 [rerere]
   enabled = true
+
+# https://spin.atomicobject.com/git-configurations-default/
+[fetch]
+  prune = true
