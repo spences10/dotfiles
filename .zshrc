@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -15,9 +15,9 @@ SPACESHIP_CHAR_SYMBOL="⚡"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  zsh-syntax-highlighting
-  zsh-autosuggestions
+        git
+        zsh-syntax-highlighting
+        zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -26,14 +26,6 @@ source $ZSH/oh-my-zsh.sh
 
 # auto suggest
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#663399,standout"
-
-# starting dir
-cd ~/repos
-
-# nvm config
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #-------- Global Alias {{{
 globalias() {
@@ -51,21 +43,14 @@ bindkey -M isearch " " magic-space    # normal space during searches
 . ~/.zsh_aliases
 #}}}
 
+# Start SSH agent if not running
+if [ -z "$SSH_AUTH_SOCK" ]; then
+   eval "$(ssh-agent -s)" > /dev/null
+   ssh-add ~/.ssh/id_github_sign_and_auth 2>/dev/null
+fi
 
-# pnpm
-export PNPM_HOME="/home/scott/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+# volta end
 
-# Turso
-export PATH="/home/scott/.turso:$PATH"
-
-# bun completions
-[ -s "/home/scott/.bun/_bun" ] && source "/home/scott/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

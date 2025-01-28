@@ -26,6 +26,7 @@ alias -g r='cd /home/scott/repos'
 
 # navigation
 alias -g c='code .'
+alias -g s='cursor .'
 alias -g e=exit
 alias -g ls='ls -lart'
 
@@ -46,6 +47,8 @@ alias -g grc='git rebase --continue'
 alias -g grs='git rebase --skip'
 alias -g grv='git remote -v'
 alias -g gp='git fetch -p'
+alias -g gcom='git checkout main'
+alias -g gcol='git checkout -'
 
 # Git Removed Branches
 alias -g grb='npx git-removed-branches'
@@ -107,3 +110,7 @@ alias -g pc='pnpm create '
 
 # nvm
 alias -g nln='nvm install-latest-npm'
+
+# volta
+alias -g vi='volta install'
+alias -g vl='volta list'
