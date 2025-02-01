@@ -1,0 +1,32 @@
+[user]
+  name = spences10
+  email = spences10apps@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIElIC79K2UnLqx8iVFUcLkjBUibMiXFFVPtiEBpxFj4c
+
+# Help with typos
+[help]
+  autoCorrect = 20
+
+# Pull settings
+[pull]
+  ff = only
+  rebase = true
+
+# Default branch name
+[init]
+  defaultBranch = main
+
+# Fix conflicts only once
+[rerere]
+  enabled = true
+
+# Auto prune when fetching
+[fetch]
+  prune = true
+
+# GPG settings for SSH signing
+[gpg]
+  format = ssh
+
+[commit]
+  gpgsign = true
